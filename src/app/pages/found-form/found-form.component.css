@@ -1,0 +1,12 @@
+.full-width{
+    width:100%;
+}
+
+.small-width{
+    margin-left: 15px;
+    width:20%;
+}
+
+.medium-width{
+    width: 70%;
+}

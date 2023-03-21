@@ -1,0 +1,261 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 17px">
+            <div class="col-md-8 offset-md-2">
+                
+               <mat-tab-group>
+                <!--ID CARD-->
+                <mat-tab label="Found an ID Card">
+                    &nbsp;
+                    <h1 class="text-center">Fill out the details of the ID Card you've found -</h1>
+                    <form (ngSubmit)="idFoundPostFormSubmit()">
+                    <mat-card>
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Registration Number</mat-label>
+                            <input
+                            required 
+                            name="registrationNumber"
+                            [(ngModel)]="idFoundPost.registrationNumber"
+                            matInput placeholder="Enter the Registration Number on the ID Card">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Student Name</mat-label>
+                            <input
+                            required 
+                            name="studentName"
+                            [(ngModel)]="idFoundPost.studentName"
+                            matInput placeholder="Enter the Students Name on the ID Card">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>What's your contact number ?</mat-label>
+                            <input
+                            required 
+                            name="whatsappNumber"
+                            [(ngModel)]="idFoundPost.whatsappNumber"
+                            matInput placeholder="Contact/WhatsApp Number ?">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Where have you submitted ID Card ?</mat-label>
+                            <select 
+                            matNativeControl 
+                            required
+                            name="submittedTo"
+                            [(ngModel)]="idFoundPost.submittedTo">
+                                <option value="security-cabin">MUJ Security Cabin</option>
+                                <option value="fire-office">Hostel Fire Control Room</option>
+                                <option value="with-me">I've Kept It With Me</option>
+                                <option value="other">Other</option>
+                              </select>
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Where did you find the ID Card ?</mat-label>
+                            <select 
+                            matNativeControl 
+                            required
+                            name="foundAtLocation"
+                            [(ngModel)]="idFoundPost.foundAtLocation">
+                                <option value="ab1">AB1</option>
+                                <option value="ab2">AB2</option>
+                                <option value="dome">Library/Dome Building</option>
+                                <option value="old-mess">Old Mess</option>
+                                <option value="hostel-mess">Hostel Mess</option>
+                                <option value="boys-block">Boys Block</option>
+                                <option value="girls-block">Girls Block</option>
+                                <option value="hostel">Hostel Common Area</option>
+                                <option value="other">Other</option>
+                              </select>
+                        </mat-form-field>
+
+                
+                    </mat-card>
+                    &nbsp;
+                    <div class="container text-center">
+                      <button type="submit" mat-raised-button color="accent">Let People Know You've Found This ID Card</button>
+                    </div>
+                    </form>
+                </mat-tab>
+                
+            <mat-tab label="Found Room Keys">
+                &nbsp;
+                    <h1 class="text-center">Fill out the details of the Room Keys you've found -</h1>
+                    <form (ngSubmit)="keyFoundPostFormSubmit()">
+                    <mat-card>
+
+                        <div class="row">
+                            <mat-form-field class="small-width" appearance="fill">
+                                <mat-label>Block</mat-label>
+                                <select 
+                                matNativeControl 
+                                required
+                                name="blockNumber"
+                                [(ngModel)]="keyFoundPost.blockNumber">
+                                    <option value="b1">B1</option>
+                                    <option value="b2">B2</option>
+                                    <option value="b3">B3</option>
+                                    <option value="b4">B4</option>
+                                    <option value="b5">B5</option>
+                                    <option value="b6">B6</option>
+                                    <option value="b7">B7</option>
+                                    <option value="g1">G1</option>
+                                    <option value="g2">G2</option>
+                                    <option value="g3">G3</option>
+                                    <option value="g4">G4</option>
+                                  </select>
+                            </mat-form-field>
+
+                            <mat-form-field class="medium-width" style ="margin-left: 1%" appearance="fill" type="number" min="0">
+                                <mat-label>Room Number</mat-label>
+                                <input
+                                required 
+                                name="registrationNumber"
+                                [(ngModel)]="keyFoundPost.roomNumber"
+                                matInput placeholder="Room Number (Ex: 136/221..)">
+                            
+                            </mat-form-field>
+                        </div>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>What's your contact number ?</mat-label>
+                            <input
+                            required 
+                            name="whatsappNumber"
+                            [(ngModel)]="keyFoundPost.whatsappNumber"
+                            matInput placeholder="Contact/WhatsApp Number ?">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Where have you submitted the keys ?</mat-label>
+                            <select matNativeControl
+                            name="submittedTo"
+                            [(ngModel)]="keyFoundPost.submittedTo" 
+                            required>
+                                <option value="security-cabin">MUJ Security Cabin</option>
+                                <option value="fire-office">Hostel Fire Control Room</option>
+                                <option value="with-me">I've Kept It With Me</option>
+                                <option value="other">Other</option>
+                              </select>
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Where did you find the keys ?</mat-label>
+                            <select matNativeControl
+                            name="foundAtLocation"
+                            [(ngModel)]="keyFoundPost.foundAtLocation" 
+                            required>
+                                <option value="ab1">AB1</option>
+                                <option value="ab2">AB2</option>
+                                <option value="dome">Library/Dome Building</option>
+                                <option value="old-mess">Old Mess</option>
+                                <option value="hostel-mess">Hostel Mess</option>
+                                <option value="boys-block">Boys Block</option>
+                                <option value="girls-block">Girls Block</option>
+                                <option value="hostel">Hostel Common Area</option>
+                                <option value="other">Other</option>
+                              </select>
+                        </mat-form-field>
+
+                
+                    </mat-card>
+                    &nbsp;
+                    <div class="container text-center">
+                        <button type="submit" mat-raised-button color="accent">Let People Know You've Found These Room Keys</button>
+                    </div>
+                    </form>
+                </mat-tab>
+                
+                <!--SOMETHING ELSE-------------------------------------->
+                <mat-tab label="Found Something Else">
+                    &nbsp;
+                <h1 class="text-center">Fill out the details of the item you've found -</h1>
+                <form (ngSubmit)="generalFoundPostFormSubmit()">
+                    <mat-card>
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Found Item Name</mat-label>
+                        <input
+                        required 
+                        [(ngModel)]="generalFoundPost.itemName"
+                        name="name"
+                        matInput placeholder="What item have you found?">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label 
+                        >What kind of item have you found?</mat-label>
+                        
+                        <select matNativeControl
+                        required  
+                        [(ngModel)]="generalFoundPost.tag"
+                        name="tag">
+                            <option value="Wallet">Wallet</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Other">Other</option>
+                          </select>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>What's your contact number ?</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="generalFoundPost.whatsappNumber" 
+                        name="whatsappNumber"
+                        matInput placeholder="Contact/WhatsApp Number ?">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Where have you submitted the found item ?</mat-label>
+                        <select matNativeControl 
+                        required 
+                        [(ngModel)]="generalFoundPost.submittedTo"
+                        name="submittedTo">
+                            <option value="security-cabin">MUJ Security Cabin</option>
+                            <option value="fire-office">Hostel Fire Control Room</option>
+                            <option value="with-me">I've Kept It With Me</option>
+                            <option value="other">Other</option>
+                          </select>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Where did you find the item ?</mat-label>
+                        <select matNativeControl 
+                        required 
+                        [(ngModel)]="generalFoundPost.foundAtLocation"
+                        name="foundAtLocation">
+                        <option value="ab1">AB1</option>
+                        <option value="ab2">AB2</option>
+                        <option value="dome">Library/Dome Building</option>
+                        <option value="old-mess">Old Mess</option>
+                        <option value="hostel-mess">Hostel Mess</option>
+                        <option value="boys-block">Boys Block</option>
+                        <option value="girls-block">Girls Block</option>
+                        <option value="hostel">Hostel Common Area</option>
+                        <option value="other">Other</option>
+                          </select>
+                    </mat-form-field>
+
+                    <div>
+                        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>attach_file</mat-icon>
+                          </button>
+                    <input #imageInput hidden="true" type="file" onclick="this.value=null" (change)="imageInputChange($event)" accept=".png"/>
+<button mat-flat-button (click)="imageInput.click()">Upload an image of the missing item</button>
+                    </div>
+
+
+                </mat-card>
+                &nbsp;
+                      <div class="container text-center">
+                        <button type="submit" mat-raised-button color="accent">Let People Know You've Found This Item</button>
+                      </div>
+                </form>
+                
+            </mat-tab>
+
+            </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

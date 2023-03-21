@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>token</mat-icon>
+    </button>
+    <span><a [routerLink]="'/'">Safe and Found</a></span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+
+      <a [routerLink]="'/'">
+        <button mat-icon-button>
+            <mat-icon>home</mat-icon>
+        </button>
+      </a>
+
+      <a [routerLink]="'/login'">
+        <button mat-icon-button>
+            <mat-icon>login</mat-icon>
+        </button>
+      </a>
+  </mat-toolbar>

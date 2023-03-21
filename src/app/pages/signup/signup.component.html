@@ -1,0 +1,47 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-6 offset-md-3">
+                <div class="container">
+                        <!--<img src="../../../assets/signup-logo.png"> -->
+                </div>
+                    <h1 class="text-center">Sign Up !</h1>
+                    <!--{{user | json}}-->
+                    <form (ngSubmit)="formSubmit()">
+                        <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Username</mat-label>
+                            <input
+                            required 
+                            [(ngModel)]="user.username"
+                            name="username"
+                            matInput placeholder="Enter a username">
+                          </mat-form-field>
+
+                          <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Phone Number</mat-label>
+                            <input 
+                            required 
+                            [(ngModel)]="user.phoneNumber"
+                            name="phoneNumber"
+                            matInput placeholder="Enter your phone number">
+                          </mat-form-field>
+
+                          <mat-form-field class="full-width" appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input
+                            required  
+                            type="password" 
+                            [(ngModel)]="user.password"
+                            name="password"
+                            matInput placeholder="Enter a secure password">
+                          </mat-form-field>
+
+                          <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary">Register</button>
+                          </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

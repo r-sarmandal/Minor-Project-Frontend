@@ -1,0 +1,73 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 17px">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Fill out the details of the item you've lost -</h1>
+                <form (ngSubmit)="lostPostFormSubmit()">
+                    <mat-card>
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Missing Item Name</mat-label>
+                        <input
+                        required 
+                        name="itemName"
+                        [(ngModel)]="lostPost.itemName"
+                        matInput placeholder="What item have you lost?">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>What kind of item have you lost?</mat-label>
+                        <select matNativeControl required name="tag" [(ngModel)]="lostPost.tag">
+                            <option value="ID Card">ID Card</option>
+                            <option value="Keys">Room Keys</option>
+                            <option value="Wallet">Wallet</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Other">Other</option>
+                          </select>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>What's your contact number ?</mat-label>
+                        <input
+                        required 
+                        name="whatsappNumber"
+                        [(ngModel)]="lostPost.whatsappNumber"
+                        matInput placeholder="Contact/WhatsApp Number ?">
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Is there a cash prize if someone finds your item?</mat-label>
+                        <select matNativeControl required name="cashPrize" [(ngModel)]="lostPost.cashPrize">
+                            <option value="false">No</option>
+                            <option value="true">Yes</option>
+                          </select>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Item Description/Comments</mat-label>
+                        <textarea
+                        name="description"
+                        [(ngModel)]="lostPost.description"
+                        matInput maxlength="80" placeholder="Provide any relevant information regarding your missing item">
+                        </textarea>
+                    </mat-form-field>
+
+
+                    <div>
+                        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+                            <mat-icon>attach_file</mat-icon>
+                          </button>
+                    <input #imageInput hidden="true" type="file" onclick="this.value=null" (change)="imageInputChange($event)" accept=".png"/>
+<button mat-flat-button (click)="imageInput.click()">Upload an image of the missing item (if applicable)</button>
+                    </div>
+
+                </mat-card>
+                &nbsp;
+                      <div class="container text-center">
+                        <button type="submit" mat-raised-button color="warn">Report Missing Item</button>
+                      </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>
