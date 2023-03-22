@@ -20,7 +20,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { MissingFormComponent } from './pages/missing-form/missing-form.component';
 import {MatSelectModule} from '@angular/material/select';
 import { FoundFormComponent } from './pages/found-form/found-form.component';
-import {MatTabsModule} from '@angular/material/tabs'; 
+import {MatTabsModule} from '@angular/material/tabs';
+import { AllPostsComponent } from './pages/all-posts/all-posts.component'; 
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     LoginComponent,
     HomeComponent,
     MissingFormComponent,
-    FoundFormComponent
+    FoundFormComponent,
+    AllPostsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatToolbarModule,
     MatIconModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

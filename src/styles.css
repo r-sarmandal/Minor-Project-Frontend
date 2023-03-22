@@ -7,4 +7,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     text-align:center;
 }
 
-mat-card { margin: 10px; padding: 10px;}
+mat-card { margin: 10px; padding: 10px; margin-top: 10px; margin-bottom: 10px;}

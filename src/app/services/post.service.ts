@@ -28,4 +28,9 @@ export class PostService {
   {
       return this.http.post(`${baseUrl}/lostpost/save`, post);
   }
+
+  public returnAllLostPost()
+  {
+    return this.http.get(`${baseUrl}/lostpost/all-posts`);
+  }
 }

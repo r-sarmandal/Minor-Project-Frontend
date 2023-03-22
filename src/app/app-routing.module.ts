@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { MissingFormComponent } from './pages/missing-form/missing-form.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FoundFormComponent } from './pages/found-form/found-form.component';
+import { AllPostsComponent } from './pages/all-posts/all-posts.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,12 @@ const routes: Routes = [
   {
     path:'foundform',
     component: FoundFormComponent,
+    pathMatch:'full'
+  },
+
+  {
+    path:'all_posts',
+    component: AllPostsComponent,
     pathMatch:'full'
   },
   

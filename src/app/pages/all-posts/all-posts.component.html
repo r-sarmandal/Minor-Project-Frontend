@@ -1,0 +1,22 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px">
+            <div class="col-md-8 offset-md-2">
+                <mat-card *ngFor="let p of posts" class="mat-elevation-z0">
+                    <mat-card-header>
+                        <mat-card-title>
+                             {{p.itemName}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{p.description}}
+                        </mat-card-subtitle>
+                     </mat-card-header>
+
+                    <mat-card-content>
+                    <mat-chip-listbox>
+                        <mat-chip-option disabled>{{p.tag}}</mat-chip-option>
+                        <mat-chip-option disabled>Cash Prize : {{p.cashPrize}}</mat-chip-option>
+                    </mat-chip-listbox>
+                    <button (click)="displayContact(p)" mat-button color="accent">Contact Owner</button>
+                    </mat-card-content>
+</mat-card>
