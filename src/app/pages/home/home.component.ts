@@ -17,5 +17,10 @@ export class HomeComponent {
   goToFound() {
     this.router.navigate(['/foundform']);
   }
+
+  goToAll()
+  {
+    this.router.navigate(['/all_posts']);
+  }
   
 }

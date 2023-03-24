@@ -27,7 +27,6 @@ export class AllPostsComponent {
             console.log(err)
             },
           complete: () => {
-            Swal.fire("Displaying all posts !", "Congrats", 'success');
             console.log("completed")
           }
         }

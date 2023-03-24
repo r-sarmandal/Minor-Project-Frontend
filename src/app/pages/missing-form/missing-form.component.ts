@@ -23,6 +23,15 @@ export class MissingFormComponent {
     description:'',
   };
 
+  public keyLostPost={
+    itemName:'',
+    tag:'keys',
+    whatsappNumber:'',
+    cashPrize:'',
+    block:'',
+    roomNumber:''
+  };
+
   lostPostFormSubmit()
   {
     this.postService.saveLostPost(this.lostPost).subscribe(
@@ -37,6 +46,22 @@ export class MissingFormComponent {
           console.log("completed")
         }
       });
+    }
+
+    keyLostPostFormSubmit()
+    {
+      this.postService.saveKeyLostPost(this.keyLostPost).subscribe(
+        {
+          next: (data) => console.log(data),
+          error: (err) => {
+            console.log(err)
+            this.snack.open("Something went wrong","X");
+          },
+          complete: () => {
+            Swal.fire("Post Shared !", "Let's hope someone finds your keys !", 'success');
+            console.log("completed")
+          }
+        });
     }
 
   imageInputChange(fileInputEvent: any) {
