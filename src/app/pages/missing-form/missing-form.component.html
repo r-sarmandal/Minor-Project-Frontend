@@ -14,17 +14,17 @@
                                     required
                                     name="blockNumber"
                                     [(ngModel)]="keyLostPost.block">
-                                        <option value="b1">B1</option>
-                                        <option value="b2">B2</option>
-                                        <option value="b3">B3</option>
-                                        <option value="b4">B4</option>
-                                        <option value="b5">B5</option>
-                                        <option value="b6">B6</option>
-                                        <option value="b7">B7</option>
-                                        <option value="g1">G1</option>
-                                        <option value="g2">G2</option>
-                                        <option value="g3">G3</option>
-                                        <option value="g4">G4</option>
+                                        <option value="B1">B1</option>
+                                        <option value="B2">B2</option>
+                                        <option value="B3">B3</option>
+                                        <option value="B4">B4</option>
+                                        <option value="B5">B5</option>
+                                        <option value="B6">B6</option>
+                                        <option value="B7">B7</option>
+                                        <option value="G1">G1</option>
+                                        <option value="G2">G2</option>
+                                        <option value="G3">G3</option>
+                                        <option value="G4">G4</option>
                                       </select>
                                     </mat-form-field>
         
@@ -62,7 +62,51 @@
                             </form>
                     </mat-tab>
 
-
+                    <mat-tab label="Lost Your ID Card?">
+                        <form (ngSubmit)="idLostPostFormSubmit()">
+                            <mat-card>
+                                <mat-form-field class="full-width" appearance="fill">
+                                    <mat-label>Registration Number</mat-label>
+                                    <input
+                                    required 
+                                    name="registrationNumber"
+                                    [(ngModel)]="idLostPost.registrationNumber"
+                                    matInput placeholder="Enter the Registration Number on your ID Card">
+                                </mat-form-field>
+        
+                                <mat-form-field class="full-width" appearance="fill">
+                                    <mat-label>Student Name</mat-label>
+                                    <input
+                                    required 
+                                    name="studentName"
+                                    [(ngModel)]="idLostPost.studentName"
+                                    matInput placeholder="Enter the name on your ID Card">
+                                </mat-form-field>
+        
+                                <mat-form-field class="full-width" appearance="fill">
+                                    <mat-label>What's your contact number ?</mat-label>
+                                    <input
+                                    required 
+                                    name="whatsappNumber"
+                                    [(ngModel)]="idLostPost.whatsappNumber"
+                                    matInput placeholder="Contact/WhatsApp Number ?">
+                                </mat-form-field>
+        
+                                <mat-form-field class="full-width" appearance="fill">
+                                    <mat-label>Is there a cash prize if someone finds your ID Card?</mat-label>
+                                    <select matNativeControl required name="cashPrize" [(ngModel)]="idLostPost.cashPrize">
+                                        <option value="false">No</option>
+                                        <option value="true">Yes</option>
+                                      </select>
+                                </mat-form-field>
+                               
+                            </mat-card>
+                            &nbsp;
+                            <div class="container text-center">
+                              <button type="submit" mat-raised-button color="warn">Report Missing ID Card</button>
+                            </div>
+                            </form>
+                    </mat-tab>
 
 
                     <mat-tab label="Lost Something else?">

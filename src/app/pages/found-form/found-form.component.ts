@@ -29,6 +29,7 @@ export class FoundFormComponent {
     whatsappNumber:'',
     submittedTo:'',
     foundAtLocation:'',
+    tag:'ID-Card',
   };
 
   public keyFoundPost={
@@ -37,6 +38,7 @@ export class FoundFormComponent {
     whatsappNumber:'',
     submittedTo:'',
     foundAtLocation:'',
+    tag:'Keys',
   };
 
   generalFoundPostFormSubmit()

@@ -4,4 +4,13 @@
   
   .orange-navbar{
     background-color: rgba(255, 166, 0, 0.751);
+    position: relative;
   }
+
+  .child{
+    position: absolute;
+    left: 1100px;
+    top: 5px;
+  }
+
+ 

@@ -1,3 +1,12 @@
+.green-border {
+  border: 2px solid rgb(0, 255, 136);
+}
+
 .red-border {
-    border: 2px solid red;
-  }
+    border: 2px solid rgb(245, 0, 0);
+ }
+
+ .example-header-image {
+  background-image: url('src\assets\keys.jpg');
+  background-size: cover;
+}

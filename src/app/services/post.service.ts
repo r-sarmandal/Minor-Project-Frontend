@@ -34,8 +34,18 @@ export class PostService {
       return this.http.post(`${baseUrl}/keylostpost/save`, post);
   }
 
+  public saveIdLostPost(post:any)
+  {
+      return this.http.post(`${baseUrl}/idlostpost/save`, post);
+  }
+
   public returnAllLostPost()
   {
     return this.http.get(`${baseUrl}/lostpost/all-posts`);
+  }
+
+  public returnAllKeyPost()
+  {
+    return this.http.get(`${baseUrl}/keylostpost/all-posts`);
   }
 }

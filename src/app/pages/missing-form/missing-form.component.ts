@@ -24,12 +24,19 @@ export class MissingFormComponent {
   };
 
   public keyLostPost={
-    itemName:'',
     tag:'keys',
     whatsappNumber:'',
     cashPrize:'',
     block:'',
     roomNumber:''
+  };
+
+  public idLostPost={
+    tag:'ID-Card',
+    whatsappNumber:'',
+    cashPrize:'',
+    registrationNumber:'',
+    studentName:''
   };
 
   lostPostFormSubmit()
@@ -59,6 +66,22 @@ export class MissingFormComponent {
           },
           complete: () => {
             Swal.fire("Post Shared !", "Let's hope someone finds your keys !", 'success');
+            console.log("completed")
+          }
+        });
+    }
+
+    idLostPostFormSubmit()
+    {
+      this.postService.saveIdLostPost(this.idLostPost).subscribe(
+        {
+          next: (data) => console.log(data),
+          error: (err) => {
+            console.log(err)
+            this.snack.open("Something went wrong","X");
+          },
+          complete: () => {
+            Swal.fire("Post Shared !", "Let's hope someone finds your ID Card !", 'success');
             console.log("completed")
           }
         });

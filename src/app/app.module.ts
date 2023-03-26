@@ -23,6 +23,7 @@ import { FoundFormComponent } from './pages/found-form/found-form.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { AllPostsComponent } from './pages/all-posts/all-posts.component'; 
 import {MatChipsModule} from '@angular/material/chips';
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatIconModule,
     MatSelectModule,
     MatTabsModule,
-    MatChipsModule
+    MatChipsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
