@@ -10,3 +10,8 @@
   background-image: url('src\assets\keys.jpg');
   background-size: cover;
 }
+
+.id-card-image {
+  background-image: url('src\assets\id_Card.avif');
+  background-size: cover;
+}

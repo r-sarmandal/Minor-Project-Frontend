@@ -5,33 +5,38 @@
                 <mat-tab-group>
 
                 <mat-tab label="All Missing Items">
-                <mat-card *ngFor="let p of missing_posts" class="mat-elevation-z0" class="red-border">
-                    <mat-card-header>
-                        <mat-card-title>
-                             {{p.itemName}}
-                        </mat-card-title>
-                        <mat-card-subtitle>
-                            {{p.description}}
-                        </mat-card-subtitle>
-                     </mat-card-header>
 
-                    <mat-card-content>
-                    <mat-chip-listbox>
-                        <mat-chip-option disabled>{{p.tag}}</mat-chip-option>
-                        <mat-chip-option disabled>Cash Prize : {{p.cashPrize}}</mat-chip-option>
-                    </mat-chip-listbox>
-                    <button (click)="displayContact(p)" mat-button color="accent">Let The Owner Know You've Found Their Item</button>
-                    </mat-card-content>
-                </mat-card>
-                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+                   
+
+                  
+                            <mat-card *ngFor="let p of missing_posts" class="mat-elevation-z0" class="red-border">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                         {{p.itemName}}
+                                    </mat-card-title>
+                                    <mat-card-subtitle>
+                                        {{p.description}}
+                                    </mat-card-subtitle>
+                                 </mat-card-header>
+                             
+                                <mat-card-content>
+                                <mat-chip-listbox>
+                                    <mat-chip-option disabled>{{p.tag}}</mat-chip-option>
+                                    <mat-chip-option disabled>Cash Prize : {{p.cashPrize}}</mat-chip-option>
+                                </mat-chip-listbox>
+                                <button (click)="displayContact(p)" mat-button color="accent">Let The Owner Know You've Found Their Item</button>
+                                </mat-card-content>
+                            </mat-card>
+
                 </mat-tab>
+               
 
-                <mat-tab label="All Found Items">
+                <mat-tab label="All Found Keys">
                     <mat-card *ngFor="let p of missing_keys" class="mat-elevation-z0" class="green-border">
 
                         <mat-card-header>
                             <mat-card-title>
-                                 {{p.block}}-{{p.roomNumber}}
+                                 {{p.blockNumber}}-{{p.roomNumber}}
                             </mat-card-title>
                             <mat-card-subtitle>
                                 {{p.description}}
@@ -42,13 +47,37 @@
     
                         <mat-card-content>
                         <mat-chip-listbox>
-                            <mat-chip-option disabled>{{p.tag}}</mat-chip-option>
-                            <mat-chip-option disabled>Cash Prize : {{p.cashPrize}}</mat-chip-option>
+                            <mat-chip-option disabled>Submitted At : {{p.submittedTo}}</mat-chip-option>
+                            
                         </mat-chip-listbox>
                         <button (click)="displayContact(p)" mat-button color="accent">Contact The Person Who Found Your Keys</button>
                         </mat-card-content>
                     </mat-card>
-                    </mat-tab>
+                </mat-tab>
+
+                <mat-tab label="All Found ID Card">
+                    <mat-card *ngFor="let p of found_id" class="mat-elevation-z0" class="green-border">
+
+                        <mat-card-header>
+                            <mat-card-title>
+                                 {{p.registrationNumber}}
+                            </mat-card-title>
+                            <mat-card-subtitle>
+                                {{p.description}}
+                            </mat-card-subtitle>
+
+                            <div mat-card-avatar class="id-card-image" alt="keys"></div>
+                         </mat-card-header>
+    
+                        <mat-card-content>
+                        <mat-chip-listbox>
+                            <mat-chip-option disabled>Found At : {{p.foundAtLocation}}</mat-chip-option>
+                            <mat-chip-option disabled>Submitted to : {{p.submittedTo}}</mat-chip-option>
+                        </mat-chip-listbox>
+                        <button (click)="displayContact(p)" mat-button color="accent">Contact The Person Who Found Your ID Card</button>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-tab>
 
                 </mat-tab-group>
             </div>

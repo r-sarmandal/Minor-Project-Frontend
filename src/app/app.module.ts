@@ -23,7 +23,8 @@ import { FoundFormComponent } from './pages/found-form/found-form.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { AllPostsComponent } from './pages/all-posts/all-posts.component'; 
 import {MatChipsModule} from '@angular/material/chips';
-import {MatPaginatorModule} from '@angular/material/paginator'; 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatGridListModule} from '@angular/material/grid-list'; 
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSelectModule,
     MatTabsModule,
     MatChipsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

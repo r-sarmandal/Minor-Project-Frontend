@@ -48,4 +48,14 @@ export class PostService {
   {
     return this.http.get(`${baseUrl}/keylostpost/all-posts`);
   }
+
+  public returnAllIDPost()
+  {
+    return this.http.get(`${baseUrl}/idfoundpost/all-posts`);
+  }
+
+  public returnAllKeyFoundPost()
+  {
+    return this.http.get(`${baseUrl}/keyfoundpost/all-posts`);
+  }
 }
